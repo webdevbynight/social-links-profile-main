@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+// Variables
+:root {
+    --primary-text: white;
+    --secondary-text: hsl(75 94% 57%);
+    --primary-backgound: hsl(0 0% 8%);
+    --overall-spacing: 2.4rem;
+    --card-background: hsl(0 0% 12%);
+    --card-width: 37.6rem;
+    --card-dynamic-width: calc(100vw * 304 / 1440);
+    --card-radius: 1.2rem;
+    --card-padding: 2.4rem;
+    --card-text-size: 1.4rem;
+    --card-title-size: 2.4rem;
+    --button-background: hsl(0 0% 20%);
+    --button-background-hover: var(--secondary-text);
+    --button-text-hover: var(--button-background);
+    --button-padding: 1.2rem;
+    --button-margin: 1.6rem;
+    --button-radius: .8rem;
+    --card-image-margin: 2.4rem;
+    --card-location-margin: .4rem;
+    --card-description-margin: 2.4rem;
+}

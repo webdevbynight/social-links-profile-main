@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+@use "../base/mixins" as *;
+
+/** @section Card */
+.card {
+    font-size: var(--card-text-size);
+    background: var(--card-background);
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    header {
+        text-align: center;
+    }
+    ul {
+        list-style: none;
+    }
+    li {
+        margin-block-start: var(--button-margin);
+        a {
+            font-weight: 700;
+            color: inherit;
+            background: var(--button-background);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            padding: var(--button-padding);
+            border-radius: var(--button-radius);
+            transition: 400ms ease-in;
+            &:hover,
+            &:focus {
+                color: var(--button-text-hover);
+                background: var(--button-background-hover);
+            }
+        }
+    }
+    q {
+        quotes: "\"" "\"";
+    }
+    img {
+        display: block;
+        margin-block-end: var(--card-image-margin);
+        margin-inline: auto;
+        border-radius: 50%;
+    }
+    .title {
+        font-size: var(--card-title-size);
+        font-weight: 600;
+    }
+    .location {
+        font-weight: 700;
+        color: var(--secondary-text);
+        margin-block: var(--card-location-margin);
+    }
+    .description {
+        margin-block: var(--card-description-margin);
+    }
+    @include css-media-queries($from-breakpoint: medium) {
+        --card-padding: 4rem;
+        width: var(--card-width);
+    }
+    @include css-media-queries($from-breakpoint: large) {
+        --card-width: 30.4rem;
+    }
+}

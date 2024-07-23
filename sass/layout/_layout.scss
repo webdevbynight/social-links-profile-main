@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+@use "../base/mixins" as *;
+
+/** @section General layout */
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: var(--primary-text);
+    background: var(--primary-backgound);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100dvh;
+}
+main {
+    padding: var(--overall-spacing);
+    @include css-media-queries($from-breakpoint: medium) {
+        --overall-spacing: 4rem;
+        display: grid;
+        place-items: center;
+    }
+}
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    a {
+        color: inherit;
+    }
+}
